@@ -9,7 +9,6 @@ import java.lang.*;
 import java.util.*;
 
 public class Nimsys {
-
     private static int timesOfGame;
     private String player1;
     private String player2;
@@ -21,7 +20,7 @@ public class Nimsys {
 
     public static void main(String[] args) {
         System.out.println("Welcome to Nim\n");
-        System.out.println("\nPlease enter a command to continue\n");
+        System.out.println("Please enter a command to continue\n");
         while (true) {
             System.out.print("$ ");
             String command = keyboard.next();
