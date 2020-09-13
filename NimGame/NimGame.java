@@ -20,9 +20,7 @@ public class NimGame {
         this.upBound = keyboard.nextInt();
         System.out.print("Enter initial number of stones : ");
         this.stoneRemain = keyboard.nextInt();
-
         this.player1Turn = true;
-
         while (this.stoneRemain > 0) {
             printStone();
             if (this.player1Turn == true) {
