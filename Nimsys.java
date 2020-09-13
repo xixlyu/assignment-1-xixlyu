@@ -4,7 +4,6 @@
  *
  */
 
-package Nim;
 
 import java.lang.*;
 import java.util.*;
