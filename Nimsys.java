@@ -83,7 +83,7 @@ public class Nimsys {
                 }
                 if (player1Choose == true) {
                     while (true) {
-                        System.out.print("\n" + player1.getPlayerName() + "'s turn. Enter stones to remove :");
+                        System.out.print("\n" + player1.getPlayerName() + "'s turn. Enter stones to remove : ");
                         int stoneRemove = player1.removeStone(keyboard.nextInt());
                         if (stoneRemove <= stoneRemain && stoneRemove <= upBound) {
                             stoneRemain = stoneRemain - stoneRemove;
