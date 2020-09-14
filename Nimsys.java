@@ -42,7 +42,7 @@ public class Nimsys {
                 nimStart();
                 break;
             case "exit":
-                System.out.println("\nThank you for playing Nim\n\n");
+                System.out.println("\nThank you for playing Nim\n");
                 Runtime.getRuntime().exit(0);
             case "help":
                 System.out.println("Type 'commands' to list all available commands\n" +
@@ -83,7 +83,7 @@ public class Nimsys {
                 }
                 if (player1Choose == true) {
                     while (true) {
-                        System.out.print("\n" + player1.getPlayerName() + "'s turn. Enter stones to remove : ");
+                        System.out.print("\n" + player1.getPlayerName() + "'s turn. Enter stones to remove :");
                         int stoneRemove = player1.removeStone(keyboard.nextInt());
                         if (stoneRemove <= stoneRemain && stoneRemove <= upBound) {
                             stoneRemain = stoneRemain - stoneRemove;
@@ -121,11 +121,22 @@ public class Nimsys {
 
             if (!whetherContinue.toUpperCase().equals("Y")) {
             // summary of the game
-                System.out.println(player1.getPlayerName() + " won " + player1.getNumOfWin()
-                        + " game out of " + timesOfGame + " played");
-                System.out.println(player2.getPlayerName() + " won " + player2.getNumOfWin()
-                        + " game out of " + timesOfGame + " played");
-                break;
+                if(player1.getNumOfWin()<=1) {
+                    System.out.println(player1.getPlayerName() + " won " + player1.getNumOfWin()
+                            + " game out of " + timesOfGame + " played");
+                }else{
+                    System.out.println(player1.getPlayerName() + " won " + player1.getNumOfWin()
+                            + " games out of " + timesOfGame + " played");
+                }
+                if(player2.getNumOfWin()<=1){
+                    System.out.println(player2.getPlayerName() + " won " + player2.getNumOfWin()
+                            + " game out of " + timesOfGame + " played");
+                    break;
+                }else{
+                    System.out.println(player2.getPlayerName() + " won " + player2.getNumOfWin()
+                            + " games out of " + timesOfGame + " played");
+                    break;
+                }
 
             }
 
