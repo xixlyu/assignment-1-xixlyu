@@ -42,7 +42,7 @@ public class Nimsys {
                 nimStart();
                 break;
             case "exit":
-                System.out.println("\nThank you for playing Nim\n");
+                System.out.println("\nThank you for playing Nim\n\n");
                 Runtime.getRuntime().exit(0);
             case "help":
                 System.out.println("Type 'commands' to list all available commands\n" +
